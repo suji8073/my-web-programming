@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <title> 웹 문서 만들기</title>
-    </head>
-    <body>
+  <head>
+    <title>웹 문서 만들기</title>
+  </head>
+  <body>
+    <h2>폼 삽입하기</h2>
 
-        <img src="image/code.png" alt="코드" >
-    </body>
-    
-    </html>
+    <form action="">
+      <fieldset>
+        <legend>상품 선택</legend>
+        <label>ID <input type="text" size="5" value="abc" /> </label><br />
+        <label>PW <input type="password" /> </label>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>0번 취미(중복 가능)</legend>
+        <input type="radio" name="q0" value="i1" />영화보기<br />
+        <input type="radio" name="q0" value="i2" />노래부르기<br />
+        <input type="radio" name="q0" value="i3" />춤추기<br />
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>1번 소속학과(하나만)</legend>
+        <input type="radio" name="q1" value="l1" />정보융합학부<br />
+        <input type="radio" name="q1" value="l2" />컴퓨터공학부<br />
+        <input type="radio" name="q1" value="l3" />소프트웨어학부<br />
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>2번 동아리(checked: 기본값)</legend>
+        <input type="checkbox" name="q2" checked value="1" />HCC LAB<br />
+        <input type="checkbox" name="q2" value="2" />HCI LAB<br />
+        <input type="checkbox" name="q2" value="3" />STG<br />
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>심부름 보깅~</legend>
+        <li>
+          <label><input type="checkbox" value="s_1" />과자</label>
+          <input type="number" min="0" max="5" />개 (최대 5개)
+        </li>
+        <li>
+          <label><input type="checkbox" value="s_2" />라면</label>
+          <input type="number" min="0" max="5" value="1" />개 (최대 5개)
+        </li>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>커피 심부름!</legend>
+        <li>
+          <label><input type="checkbox" value="f_1" />아이스아메리카노</label>
+          <input type="range" min="0" max="5" />개 (최대 5개)
+        </li>
+        <li>
+          <label><input type="checkbox" value="f_2" />아이스카페라떼</label>
+          <input type="range" min="0" max="4" value="1" />개 (최대 4개)
+        </li>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>활동 시작일</legend>
+        <input type="date" /> <br />
+        <input type="month" /> <br />
+        <input type="week" /> <br />
+        <input type="time" /> <br />
+        <input type="datetime-local" /> <br />
+        <br />
+
+        <input type="text" placeholder="아무것도 입력하지마세요!" /><br />
+        <input type="text" value="suji" readonly /><br />
+        <input type="text" required />
+      </fieldset>
+      <br />
+
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <input type="submit" value="제출하기" />
+    </form>
+  </body>
+</html>
