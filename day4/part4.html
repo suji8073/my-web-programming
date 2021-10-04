@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>알림창 구현</title>
+        <meta name = "viewport" content="width=device=width, initial-scale = 1"/>
+
+        <script>
+            var userNamber = prompt("숫자를 입력하세요.")
+
+            if (userNamber != null){ //입력값이 null이 아니면 if~else 문을 실행
+                (userNamber % 3 === 0) ? alert("3의 배수입니다.") : alert("3의 배수가 아닙니다.");
+            }
+            else
+                alert("입력이 취소됐습니다."); //입력값이 null이면 알림 창을 보여줌
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

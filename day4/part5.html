@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>조건 체크 switch</title>
+        <meta name = "viewport" content="width=device=width, initial-scale = 1"/>
+
+        <style>
+            strong{
+                font-size: 5vw;
+                text-align: center;
+                color: rgb(228, 77, 77)
+            }
+            #wrapper{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 200px);
+                grid-template-rows: 100px;
+            }
+            .items{
+                border-style: 1px solid #000;
+            }
+        </style>
+
+        <script> 
+            var session = prompt("관심 세션을 선택해주세요. 1-마케팅, 2-개발, 3-디자인")
+
+            switch(session){
+                case "1" : document.write("<p>마케팅 세션은 <strong>201호</strong>에서 열립니다.");
+                    break;
+                case "2" : document.write("<p>개발 세션은 <strong>202호</strong>에서 열립니다.");
+                    break;
+                case "3" : document.write("<p>디자인 세션은 <strong>203호</strong>에서 열립니다.");
+                    break;
+                default: alert("잘못 입력했습니다."); //1, 2, 3이 아닌 값을 입력받으면
+
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
