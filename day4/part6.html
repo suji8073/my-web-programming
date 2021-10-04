@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Dom을 이용한 이벤트 처리기</title>
+        <meta name = "viewport" content="width=device=width, initial-scale = 1"/>
+
+
+        <script> 
+            const checkPW = () =>{
+                document.querySelector("#check").textContent = "비밀번호 체크 완료";
+            };
+            const checkSamePW = () => {
+                document.querySelector("#checkSame").textContent = "비밀번호 같은지 체크 완료";
+            };
+
+        </script>
+    </head>
+    <body>
+
+        <input type = "text" onblur="checkPW()"; />
+        <p id = "check"></p>
+        
+        <input type = "text" onblur="checkSamePW()"; />
+        <p id = "checkSame"></p>
+
+    </body>
+</html>
