@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>DOM 요소에 접근하고 속성 가져오기</title>
+
+    </head>
+    <body>
+        <button onclick="inntext()"> innerText로 표시하기</button>
+        <button onclick="innhtml()"> innerHTML로 표시하기</button>
+        <h1>현재 시각 : </h1>
+        <div id="current"></div>
+        <p></p>
+        <h1>이미지 변경하기 : </h1>
+
+        <div id = "prod-pic">
+            <img src = "../image/flower1.jpg" alt="코드", id = "cup" width="200"
+            height="200" onclick="displaySrc()">
+        </div>
+
+        <p></p>
+
+        <div id="hello" class = "span123" onclick="hello()"> 123</div>
+
+        <script>
+            var now = new Date();
+
+            function inntext(){
+                document.getElementById("current").innerText = now.toLocaleString();
+            }
+
+            function innhtml(){
+                document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+            }
+
+            function displaySrc(){
+                var cup = document.querySelector("#cup");
+                alert("이미지 소스 : " + cup.getAttribute("src"));
+                cup.setAttribute("src", "../image/flower2.jpg")
+            }
+
+            function hello(){
+                let temp = document.getElementById("hello");
+                temp.onclick = function(event){
+                    alert("" + this.getAttribute("class"))
+                }
+            }
+        </script>
+
+    </body>
+</html>

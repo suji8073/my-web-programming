@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>DOM 요소에 접근하고 속성 가져오기</title>
+
+    </head>
+    <body>
+        <div id = "container">
+            <h1> DOM을 공부합시다.</h1>
+            <a href="#" onclick="addContents(); this.onclick='';">더보기 </a>
+            <p>this.onclick은 더보기 버튼을 딱 한번만 누를 수 있게 하는 기능</p>
+            <div id = "info"></div>
+        </div>
+
+        <script>
+
+            function addContents(){
+                var newP = document.createElement("p");
+                var txtNode = document.createTextNode("DOM은 document object model의 줄임말입니다");
+                newP.appendChild(txtNode);
+                var newImg = document.createElement("img");
+                var srcNode = document.createAttribute("src");
+                var altNode = document.createAttribute("alt");
+                srcNode.value="../image/Dom.png";
+                altNode.value="돔 크리 예제 이미지";
+                newImg.setAttributeNode(srcNode);
+                newImg.setAttributeNode(altNode);
+
+                document.getElementById("info").appendChild(newP);
+                document.getElementById("info").appendChild(newImg);
+
+                
+            }
+        </script>
+
+    </body>
+</html>
