@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <title> 0913 </title>
-    </head>
-    <body>
-
-        <img src="image/code.png" alt="코드" >
-    </body>
-    
-    </html>
+  <head>
+    <title>0913</title>
+  </head>
+  <body>
+    <img id="onclick_img" src="../image/code.png" alt="코드" />
+    <script>
+      let temp = document.getElementById("onclick_img");
+      temp.onclick = function (event) {
+        alert(" " + temp.getAttribute("src"));
+      };
+    </script>
+  </body>
+</html>
